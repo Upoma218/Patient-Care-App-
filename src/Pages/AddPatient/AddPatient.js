@@ -25,7 +25,7 @@ const AddPatient = () => {
         }
 
 
-        fetch('http://localhost:5000/details', {
+        fetch('https://patient-care-app-server.vercel.app/details', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

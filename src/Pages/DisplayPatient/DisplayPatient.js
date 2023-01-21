@@ -8,14 +8,14 @@ const DisplayPatient = () => {
     const [patients, setPatients] = useState([]);
     const [deletePatient, setDeletePatients] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/details')
+        fetch('https://patient-care-app-server.vercel.app/details')
             .then(res => res.json())
             .then(data => setPatients(data))
     }, [])
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to delete this task?');
         if (proceed) {
-            fetch(`http://localhost:5000/details/${id}`, {
+            fetch(`https://patient-care-app-server.vercel.app/details/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json',

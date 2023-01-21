@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
             {
                 path: '/editInfo/:id',
                 element: <EditPatientInfo></EditPatientInfo>,
-                loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({params}) => fetch(`https://patient-care-app-server.vercel.app/details/${params.id}`)
             },
         ]
     }

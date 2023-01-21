@@ -24,7 +24,7 @@ const EditPatientInfo = () => {
         }
         console.log(info)
 
-        fetch(`http://localhost:5000/editInfo/${previousInfo._id}`,
+        fetch(`https://patient-care-app-server.vercel.app/editInfo/${previousInfo._id}`,
             {
                 method: 'PUT',
                 headers: {
